@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+        <link async="" href="http://fonts.googleapis.com/css?family=Advent%20Pro" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css">
+    </head>
+<body>
+      <section class="portfolio">
+        <div class="wrap first">
+            <div class="about-me"><div>
+            <h1>Front-end developer</h1>
+            <ul>
+               <li> HTML/CSS (HTML5/CSS3)</li>
+               <li> Javascript; JQuery</li>
+               <li> Responsive design; usability and cross-browser. </li>
+               <li> Web UI/UX design; Adobe Photoshop; prototyping </li>
+               <li> Experience working straightly with customers all over the world</li>
+            </ul>
+            </div><button type="button" class="close-button" ><i class="fa fa-times" aria-hidden="true"></i></button></div>
+            <div class="services"><div>item 2</div><button type="button" class="close-button" ><i class="fa fa-times" aria-hidden="true"></i></button></div>
+            <div class="portfolio-div">
+            <div>
+                <div class="left">
+                    <div>
+                        <h2>Portfolio</h2>
+                        <p>Small selection of my works: </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <button type="button" class="close-button" ><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="wrap second">
+            <div class="my-photo"><div><img src="img/sergMikh.png" alt="Serg Mikhailov"></div><button type="button" class="close-button" ><i class="fa fa-times" aria-hidden="true"></i></button></div>
+        </div>
+        <div class="wrap third">
+            <div class="shop"><div>item 1</div><button type="button" class="close-button" ><i class="fa fa-times" aria-hidden="true"></i></button></div>
+            <div class="feedback"><div>item 2</div><button type="button" class="close-button" ><i class="fa fa-times" aria-hidden="true"></i></button></div>
+        </div>
+      </section>
+      <footer>
+        <div class="wrap footer">
+            <div class="footer-text"><div>Item 1 footer text </div></div>
+            <div class="social"><div><a class="social-button facebook" href="#"><i class="fa fa-facebook"></i></a></div></div>
+            <div class="social"><div><a class="social-button skype" href="#"><i class="fa fa-skype"></i></a></div></div>
+            <div class="social"><div><a class="social-button vkontakte" href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></div></div>
+        </div>
+      </footer>    
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        $('.portfolio .wrap>div').click(function() {
+           /*$('.portfolio .wrap>div').removeClass('active');*/
+          $(this).toggleClass('active');
+        })
+        $('.portfolio .close-button').click(function() {
+          $(this).toggleClass('active');
+        })
+          
+    $(window).scroll(function() {
+    var index = $(this).scrollTop();
+    console.log(this);
+    if(index<100) {
+      $('body').css({'background-position' : '0 ' (index+1)+'px' }) ;
+    }
+  });
+    });
+    </script>
+    <script type="text/javascript">
+        var elem = document.querySelector('body');
+        if (elem.addEventListener) {
+  if ('onwheel' in document) {    
+    elem.addEventListener("wheel", onWheel);
+}
+}
+var delta = 0;
+    function onWheel(e) {
+      e = e || window.event;
+      delta = delta + e.deltaY ;
+      $('body').css({'background-position' : '0 '+(-delta / 10)+'px' }) ;
+      console.log(delta);
+    }
+
+    </script>
+
+
+</body>
+</html>

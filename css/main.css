@@ -1,0 +1,190 @@
+body, html{
+  width: 100%;
+  height: 100%;
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: transparent;
+  min-width: 250px;
+  background-image: url(../img/bg_main.png);
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  transition: all 0.35s cubic-bezier(0,0,1,1);
+}
+
+.portfolio{
+  display: block;
+  width: 100%;
+}
+.portfolio>.wrap>div{
+	cursor: pointer;
+}
+.wrap{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    height: calc(100vh/4);
+    max-height: 100%;
+    transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+}
+
+.wrap>div{
+	width: calc(100vw/3 - 4px);
+    border: 2px solid #ddd;
+    background-color:#3498db;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    font: normal normal normal 1em/normal "Advent Pro", Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+}
+.wrap>div .close-button{
+	display: none;
+}
+.wrap>div.active{
+	margin: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 80px);
+	height: calc(100% - 80px);
+	z-index: 1;
+}
+.wrap>div.active .close-button{
+	display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.wrap.footer .footer-text{
+	flex: 12 0 50%;
+}
+.wrap.third{
+	justify-content:space-between;
+}
+.wrap strong{
+  color:rgba(230,230,230,1);
+  font-weight: normal;
+  display: block;
+  margin-top: 10px;
+}
+.my-photo img{
+	height: 100%;
+} 
+/*Footer*/
+.wrap>.social{
+	overflow: hidden;
+	background-color: #fff;
+}
+.social a{
+    font-size: 7em;
+    transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    line-height: 100%;
+    text-decoration: none;
+}
+.social,
+.social-button{
+	position: relative;
+}
+.social>div{
+	height: 100%;
+}
+.social-button:before {
+		content: '';
+		background-color: #000;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 90%;
+		left: -110%;
+		transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+	}
+	
+.social	.fa {
+		vertical-align: middle;
+		transform: scale(.8);
+		transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+	}
+.social:focus .social-button:before,
+.social:hover .social-button:before{		
+			top: 0;
+			left: 0;
+		}
+		
+.social:focus .fa,
+.social:hover .fa {
+			color: #fff;
+			transform: scale(1);
+		}
+.facebook {
+	color:#3B5998; 
+	}
+.facebook:before{
+	background: #3B5998;
+}
+.skype{
+	color:#00AFF0;
+}
+.skype:before{
+	background:#00AFF0;
+}
+.vkontakte{
+	color:#507299;
+}
+.vkontakte:before{
+	background:#507299;
+}
+.portfolio .about-me ul{
+	text-align: left;
+}
+.portfolio .portfolio-div>div{
+	width: 100%;
+	height: 100%;
+	display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+.portfolio .portfolio-div>div>div{
+    height: 100%;
+}
+.portfolio .portfolio-div .left{
+    transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%
+}
+.portfolio .portfolio-div .right{
+	width: 50%;
+}
+.portfolio .portfolio-div .right a{
+    font-size: 7em;
+    transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    line-height: 100%;
+    text-decoration: none;
+}
+.portfolio .portfolio-div.active .right a{
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+}
